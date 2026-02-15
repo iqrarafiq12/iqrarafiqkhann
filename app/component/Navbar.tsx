@@ -50,7 +50,7 @@ export default function Navbar() {
                   transition-all duration-300
                   ${
                     isActive
-                      ? "bg-[var(--color-secondary)] text-[var(--color-dark-2)] shadow-[0_0_15px_var(--color-accent)]"
+                      ? "bg-[var(--color-secondary)] text-[var(--color-foreground)] shadow-[0_0_15px_var(--color-accent)]"
                       : "text-[var(--color-dark-2)]/60 hover:text-[var(--color-secondary)] hover:bg-[var(--color-secondary)]/20"
                   }
                 `}

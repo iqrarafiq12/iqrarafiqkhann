@@ -1,0 +1,129 @@
+import Image from "next/image";
+import Link from "next/link";
+import { 
+  FaLinkedin, 
+  FaPinterestP, 
+  FaInstagram, 
+  FaEnvelope, 
+  FaBehance, 
+  FaYoutube 
+} from "react-icons/fa";
+
+export default function ProfileCard() {
+  return (
+    <div className="
+      bg-[var(--brand-secondary)]
+      rounded-3xl
+      shadow-2xl
+      border border-white/5
+      flex flex-col items-center text-center
+      mx-auto
+      
+      /* Responsive Width */
+      w-full
+      max-w-sm
+      sm:max-w-md
+      lg:w-[400px]
+      
+      /* Responsive Padding */
+      p-6 sm:p-8
+    ">
+
+      {/* Responsive Image */}
+      <div className="
+        relative
+        w-full
+        aspect-square
+        max-w-[300px]
+        sm:max-w-[350px]
+        rounded-2xl
+        overflow-hidden
+        mb-6 sm:mb-8
+      ">
+        <Image
+          src="/profile.jpg"
+          alt="Profile"
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 300px, 350px"
+        />
+      </div>
+
+      {/* Name */}
+      <h2 className="
+        text-2xl sm:text-3xl lg:text-4xl
+        font-bold
+        mb-2
+        text-[var(--brand-foreground)]
+      ">
+        IQRA RAFIQ KHAN
+      </h2>
+
+      {/* Role */}
+      <p className="text-sm sm:text-base text-[var(--brand-dark-3)] mb-1">
+        Product Designer & Developer
+      </p>
+
+      {/* Location */}
+      <p className="text-xs sm:text-sm text-[var(--brand-dark-2)] mb-6">
+        Karachi, Pakistan
+      </p>
+
+      {/* Social Icons */}
+      <div className="
+        flex flex-wrap
+        gap-4
+        text-[var(--brand-accent)]
+        mb-6 sm:mb-8
+        justify-center
+      ">
+        <Link href="https://www.youtube.com/" target="_blank" aria-label="YouTube"
+          className="hover:text-[var(--brand-primary)] transition">
+          <FaYoutube size={20} />
+        </Link>
+
+        <Link href="https://www.linkedin.com/in/iqrarafiqkhann/" target="_blank" aria-label="Linkedin"
+          className="hover:text-[var(--brand-primary)] transition">
+          <FaLinkedin size={20} />
+        </Link>
+
+        <Link href="https://www.instagram.com/iqrarafiqkhann/" target="_blank" aria-label="Instagram"
+          className="hover:text-[var(--brand-primary)] transition">
+          <FaInstagram size={20} />
+        </Link>
+
+        <Link href="https://www.pinterest.com/IqraRafiqKhann/" target="_blank" aria-label="Pinterest"
+          className="hover:text-[var(--brand-primary)] transition">
+          <FaPinterestP size={20} />
+        </Link>
+
+        <Link href="https://www.behance.net/IqraRafiqKhan" target="_blank" aria-label="Behance"
+          className="hover:text-[var(--brand-primary)] transition">
+          <FaBehance size={20} />
+        </Link>
+
+        <Link href="mailto:workwithiqr@example.com" aria-label="Email"
+          className="hover:text-[var(--brand-primary)] transition">
+          <FaEnvelope size={20} />
+        </Link>
+      </div>
+
+      {/* Button */}
+      <Link href="/contact" className="w-full">
+        <button className="
+          w-full
+          py-3
+          rounded-xl
+          bg-[var(--brand-primary)]
+          hover:opacity-90
+          transition
+          text-[var(--brand-dark-3)]
+          font-semibold
+          text-sm sm:text-base
+        ">
+          Let’s Talk
+        </button>
+      </Link>
+    </div>
+  );
+}
