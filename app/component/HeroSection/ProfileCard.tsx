@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  FaLinkedin, 
-  FaPinterestP, 
-  FaInstagram, 
-  FaEnvelope, 
-  FaBehance, 
-  FaYoutube 
+import {
+  FaLinkedin,
+  FaPinterestP,
+  FaInstagram,
+  FaEnvelope,
+  FaBehance,
+  FaYoutube
 } from "react-icons/fa";
 
 export default function ProfileCard() {
@@ -19,17 +19,15 @@ export default function ProfileCard() {
       flex flex-col items-center text-center
       mx-auto
       
-      /* Responsive Width */
       w-full
       max-w-sm
       sm:max-w-md
       lg:w-[400px]
       
-      /* Responsive Padding */
       p-6 sm:p-8
     ">
 
-      {/* Responsive Image */}
+      {/* Image */}
       <div className="
         relative
         w-full
@@ -42,7 +40,7 @@ export default function ProfileCard() {
       ">
         <Image
           src="/profile.jpg"
-          alt="Profile"
+          alt="Iqra Rafiq Khan"
           fill
           className="object-cover"
           sizes="(max-width: 640px) 300px, 350px"
@@ -60,13 +58,13 @@ export default function ProfileCard() {
       </h2>
 
       {/* Role */}
-      <p className="text-sm sm:text-base text-[var(--brand-dark-3)] mb-1">
-        Product Designer & Developer
+      <p className="text-sm sm:text-base text-[var(--brand-dark-3)] mb-2">
+        Product Designer & Software Developer
       </p>
 
       {/* Location */}
       <p className="text-xs sm:text-sm text-[var(--brand-dark-2)] mb-6">
-        Karachi, Pakistan
+      Karachi, Pakistan | Working Worldwide
       </p>
 
       {/* Social Icons */}

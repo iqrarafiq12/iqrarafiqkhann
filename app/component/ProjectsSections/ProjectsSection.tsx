@@ -12,10 +12,9 @@ export default function ProjectsSection() {
       {/* Heading */}
       <div className="max-w-7xl mx-auto mb-12">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--foreground)] leading-tight">
-          Recent Projects <br />
-          and{" "}
+2+ Years Experience{" "}& <b />
           <span className="text-[var(--brand-accent)]">
-            Achievements
+            Resent Projects
           </span>
         </h2>
       </div>

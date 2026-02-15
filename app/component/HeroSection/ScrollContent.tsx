@@ -38,10 +38,9 @@ export default function ScrollContent() {
           sm:max-w-xl 
           text-sm sm:text-base
         ">
-          I’m Iqra Rafiq Khan a UI/UX Designer and Frontend Developer
-          helping startups and growing businesses transform ideas into
-          responsive, high-performing websites through strategic design
-          and modern development.
+          I’m Iqra Rafiq Khan a UI/UX Designer and Frontend Developer crafting scalable,
+          high-performing digital products for startups and modern brands.
+          Open to collaborations, product design, and full-stack development projects.
         </p>
 
         <div className="
@@ -110,15 +109,15 @@ export default function ScrollContent() {
           </Link>
         </div>
 
-{/* PROJECTS */}
-<div className="min-h-screen">
-  <ProjectsSection />
-</div>
+        {/* PROJECTS */}
+        <div className="min-h-screen">
+          <ProjectsSection />
+        </div>
 
-{/* TOOLS */}
-<div className="min-h-screen">
-  <ToolsSection />
-</div>
+        {/* TOOLS */}
+        <div className="min-h-screen">
+          <ToolsSection />
+        </div>
       </section>
     </>
   );
