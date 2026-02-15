@@ -6,9 +6,8 @@ import ProjectCard from "./ProjectCard";
 export default function ProjectsSection() {
   return (
     <section
-      className="py-20 px-4 sm:px-6 lg:px-12 
-      bg-[var(--background)]
-      ml-0 md:ml-[-60px] lg:ml-[-60px]"
+      className="py-20 px-4 sm:px-6 lg:px-12  mt-[-30px]
+      ml-0 md:ml-[-60px] lg:ml-[-50px]"
     >
       {/* Heading */}
       <div className="max-w-7xl mx-auto mb-12">

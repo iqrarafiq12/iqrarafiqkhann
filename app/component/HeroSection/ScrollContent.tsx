@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ProjectsSection from "../ProjectsSections/ProjectsSection";
+import ToolsSection from "../Tools/ToolsSection";
 
 
 export default function ScrollContent() {
@@ -22,8 +23,7 @@ export default function ScrollContent() {
           md:text-5xl 
           lg:text-5xl 
           font-bold 
-          leading-tight 
-          mb-6
+          leading-tight
         ">
           Designing & Building <br />
           Digital Experiences That{" "}
@@ -37,7 +37,6 @@ export default function ScrollContent() {
           max-w-full 
           sm:max-w-xl 
           text-sm sm:text-base
-          mb-8
         ">
           I’m Iqra Rafiq Khan a UI/UX Designer and Frontend Developer
           helping startups and growing businesses transform ideas into
@@ -51,7 +50,6 @@ export default function ScrollContent() {
           sm:flex-row 
           flex-wrap 
           gap-8 sm:gap-10 
-          mb-12
         ">
           <div>
             <h3 className="text-1xl sm:text-2xl font-bold text-[var(--brand-dark-3)]">
@@ -115,6 +113,11 @@ export default function ScrollContent() {
 {/* PROJECTS */}
 <div className="min-h-screen">
   <ProjectsSection />
+</div>
+
+{/* TOOLS */}
+<div className="min-h-screen">
+  <ToolsSection />
 </div>
       </section>
     </>
