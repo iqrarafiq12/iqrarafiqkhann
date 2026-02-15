@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ProjectsSection from "../ProjectsSections/ProjectsSection";
 
 
 export default function ScrollContent() {
@@ -111,6 +112,10 @@ export default function ScrollContent() {
           </Link>
         </div>
 
+{/* PROJECTS */}
+<div className="min-h-screen">
+  <ProjectsSection />
+</div>
       </section>
     </>
   );

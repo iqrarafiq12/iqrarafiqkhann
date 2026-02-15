@@ -3,10 +3,10 @@ import ScrollContent from "./ScrollContent";
 
 export default function HeroLayout() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen lg:mt-30">
       <div
         className="
-          max-w-7xl
+          max-w-9xl
           mx-auto
           px-4 sm:px-6 md:px-10 lg:px-12
           py-6 sm:py-8 md:py-12
@@ -36,10 +36,10 @@ export default function HeroLayout() {
           </div>
 
           {/* RIGHT - Scroll Content */}
-          <div className="w-full">
+         
             <ScrollContent />
-          </div>
         </div>
+        
       </div>
     </main>
   );
