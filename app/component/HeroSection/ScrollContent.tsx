@@ -1,6 +1,10 @@
 import Link from "next/link";
 import ProjectsSection from "../ProjectsSections/ProjectsSection";
 import ToolsSection from "../Tools/ToolsSection";
+import ReviewsSection from "../ReviewsSection";
+import QA from "../QA";
+import CTA from "../CTA";
+import BlogSection from "../BlogsSections/BlogSection";
 
 
 export default function ScrollContent() {
@@ -110,14 +114,27 @@ export default function ScrollContent() {
         </div>
 
         {/* PROJECTS */}
-        <div className="min-h-screen">
-          <ProjectsSection />
-        </div>
+
+        <ProjectsSection />
+
 
         {/* TOOLS */}
-        <div className="min-h-screen">
-          <ToolsSection />
-        </div>
+
+        <ToolsSection />
+
+        {/* TOOLS */}
+        <ReviewsSection />
+
+    {/* BLOGS */}
+        <BlogSection />
+        {/* FAQS */}
+
+        <QA />
+
+        {/* CTA */}
+
+        <CTA />
+
       </section>
     </>
   );

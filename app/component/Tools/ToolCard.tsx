@@ -10,7 +10,7 @@ export default function ToolCard({ name, role, icon: Icon }: ToolCardProps) {
   return (
     <div
       className="group flex items-center gap-5 p-6 rounded-2xl
-      bg-[var(--brand-dark-1)]
+      bg-secondary
       border border-white/5
       hover:border-[var(--brand-accent)]/40
       transition-all duration-300"
