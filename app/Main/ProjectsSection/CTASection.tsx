@@ -29,7 +29,8 @@ export default function CTASection() {
               sm:w-14 sm:h-14
               flex items-center justify-center
               rounded-full
-              bg-[var(--brand-accent)]
+              bg-accent
+              text-foreground
               hover:scale-110
               transition-all duration-300
               shadow-lg
@@ -40,14 +41,14 @@ export default function CTASection() {
 
           {/* Content */}
           <div className="max-w-3xl">
-            <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-[var(--brand-dark-3)]">
+            <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-foreground">
               Let’s<br />
-              <span className="text-[var(--brand-accent)]">
+              <span className="text-accent">
                 Collaborate
               </span>
             </h2>
 
-            <p className="mt-6 text-[var(--brand-dark-2)] text-sm sm:text-base leading-relaxed">
+            <p className="mt-6 text-foreground text-sm sm:text-base leading-relaxed">
                  Unlock the potential of your product with expert design and
               development services. Let’s collaborate to create user-centered
               solutions that not only meet your goals but also delight your users.

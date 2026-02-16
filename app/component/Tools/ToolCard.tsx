@@ -12,15 +12,15 @@ export default function ToolCard({ name, role, icon: Icon }: ToolCardProps) {
       className="group flex items-center gap-5 p-6 rounded-2xl
       bg-secondary
       border border-white/5
-      hover:border-[var(--brand-accent)]/40
+      hover:border-brand-accent/40
       transition-all duration-300"
     >
       {/* Icon */}
       <div
         className="w-14 h-14 flex items-center justify-center rounded-xl
-        bg-[var(--brand-dark-3)]
-        text-[var(--brand-primary)]
-        group-hover:bg-[var(--brand-accent)]
+        bg-foreground
+        text-primary
+        group-hover:bg-accent
         group-hover:text-black
         transition"
       >
@@ -29,7 +29,7 @@ export default function ToolCard({ name, role, icon: Icon }: ToolCardProps) {
 
       {/* Text */}
       <div>
-        <h3 className="text-lg sm:text-xl font-semibold text-[var(--foreground)]">
+        <h3 className="text-lg sm:text-xl font-semibold text-foreground">
           {name}
         </h3>
         <p className="text-sm text-[var(--brand-dark-2)]">

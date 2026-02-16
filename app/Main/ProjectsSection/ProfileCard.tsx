@@ -12,10 +12,10 @@ import {
 export default function ProfileCard() {
   return (
     <div className="
-      bg-[var(--brand-secondary)]
+      bg-secondary
       rounded-3xl
       shadow-2xl
-      border border-white/5
+      border border-foreground/5
       flex flex-col items-center text-center
       mx-auto
       
@@ -52,18 +52,18 @@ export default function ProfileCard() {
         text-2xl sm:text-3xl lg:text-4xl
         font-bold
         mb-2
-        text-[var(--brand-foreground)]
+        text-foreground
       ">
         IQRA RAFIQ KHAN
       </h2>
 
       {/* Role */}
-      <p className="text-sm sm:text-base text-[var(--brand-dark-3)] mb-2">
+      <p className="text-sm sm:text-base text-dark-2 mb-2">
         Product Designer & Software Developer
       </p>
 
       {/* Location */}
-      <p className="text-xs sm:text-sm text-[var(--brand-dark-2)] mb-6">
+      <p className="text-xs sm:text-sm text-dark-3 mb-6">
       Karachi, Pakistan | Working Worldwide
       </p>
 
@@ -76,46 +76,46 @@ export default function ProfileCard() {
         justify-center
       ">
         <Link href="https://www.youtube.com/" target="_blank" aria-label="YouTube"
-          className="hover:text-[var(--brand-primary)] transition">
+          className="hover:text-primary transition">
           <FaYoutube size={20} />
         </Link>
 
         <Link href="https://www.linkedin.com/in/iqrarafiqkhann/" target="_blank" aria-label="Linkedin"
-          className="hover:text-[var(--brand-primary)] transition">
+          className="hover:text-primary transition">
           <FaLinkedin size={20} />
         </Link>
 
         <Link href="https://www.instagram.com/iqrarafiqkhann/" target="_blank" aria-label="Instagram"
-          className="hover:text-[var(--brand-primary)] transition">
+          className="hover:text-primary transition">
           <FaInstagram size={20} />
         </Link>
 
         <Link href="https://www.pinterest.com/IqraRafiqKhann/" target="_blank" aria-label="Pinterest"
-          className="hover:text-[var(--brand-primary)] transition">
+          className="hover:text-primary transition">
           <FaPinterestP size={20} />
         </Link>
 
         <Link href="https://www.behance.net/IqraRafiqKhan" target="_blank" aria-label="Behance"
-          className="hover:text-[var(--brand-primary)] transition">
+          className="hover:text-primary transition">
           <FaBehance size={20} />
         </Link>
 
         <Link href="mailto:workwithiqr@example.com" aria-label="Email"
-          className="hover:text-[var(--brand-primary)] transition">
+          className="hover:text-primary transition">
           <FaEnvelope size={20} />
         </Link>
       </div>
 
       {/* Button */}
-      <Link href="/contact" className="w-full">
+      <Link href="/contact" className="w-full text-foreground">
         <button className="
           w-full
           py-3
           rounded-xl
-          bg-[var(--brand-primary)]
+          bg-primary
           hover:opacity-90
           transition
-          text-[var(--brand-dark-3)]
+          text-foreground
           font-semibold
           text-sm sm:text-base
         ">

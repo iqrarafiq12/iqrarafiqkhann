@@ -49,7 +49,7 @@ export default function QA() {
         min-h-screen 
         px-4 sm:px-6 lg:px-8 
         py-16 sm:py-20 lg:py-24 
-        text-[var(--brand-dark-3)] 
+        text-foreground
         mt-[-80px] sm:mt-[-120px] lg:mt-[-130px] 
         lg:ml-[-30px]
       "
@@ -57,9 +57,9 @@ export default function QA() {
       <div className="max-w-5xl mx-auto">
         
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12">
+        <h2 className="text-4xl sm:text-5xl text-foreground lg:text-6xl font-bold mb-12">
           Frequently Asked{" "}
-          <span className="text-[var(--brand-accent)]">
+          <span className="text-accent">
             Questions
           </span>
         </h2>
@@ -72,7 +72,7 @@ export default function QA() {
             return (
               <div
                 key={index}
-                className="rounded-2xl bg-[var(--brand-secondary)] border border-white/5 backdrop-blur-lg transition-all duration-300"
+                className="rounded-2xl bg-secondary border border-foreground/5 backdrop-blur-lg transition-all duration-300"
               >
                 {/* Question */}
                 <button
@@ -84,9 +84,9 @@ export default function QA() {
                   </span>
 
                   {isOpen ? (
-                    <FiChevronUp className="text-[var(--brand-accent)] text-xl" />
+                    <FiChevronUp className="text-accent text-xl" />
                   ) : (
-                    <FiChevronDown className="text-[var(--brand-dark-2)] text-xl" />
+                    <FiChevronDown className="text-dark-2 text-xl" />
                   )}
                 </button>
 
@@ -99,7 +99,7 @@ export default function QA() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="text-[var(--brand-dark-2)] text-sm sm:text-base leading-relaxed">
+                    <p className="text-dark-2 text-sm sm:text-base leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>

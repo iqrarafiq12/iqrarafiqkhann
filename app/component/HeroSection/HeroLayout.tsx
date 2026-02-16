@@ -36,10 +36,10 @@ export default function HeroLayout() {
           </div>
 
           {/* RIGHT - Scroll Content */}
-         
-            <ScrollContent />
+
+          <ScrollContent />
         </div>
-        
+
       </div>
     </main>
   );

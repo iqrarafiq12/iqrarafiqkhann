@@ -10,10 +10,10 @@ export default function ToolsSection() {
 
       {/* Heading */}
       <div className="max-w-7xl mx-auto mb-12">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--foreground)] leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight">
           Top Tools for<br />
           Exceptional{" "}
-          <span className="text-[var(--brand-accent)]">
+          <span className="text-accent">
             Results
           </span>
         </h2>

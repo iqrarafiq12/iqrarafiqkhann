@@ -55,28 +55,28 @@ export default function ScrollContent() {
           gap-8 sm:gap-10 
         ">
           <div>
-            <h3 className="text-1xl sm:text-2xl font-bold text-[var(--brand-dark-3)]">
+            <h3 className="text-1xl sm:text-2xl font-bold text-foreground">
               UI/UX + Dev
             </h3>
-            <p className="text-[var(--brand-dark-2)] text-sm">
+            <p className="text-dark-2 text-sm">
               End-to-End Execution
             </p>
           </div>
 
           <div>
-            <h3 className="text-1xl sm:text-2xl font-bold text-[var(--brand-dark-3)]">
+            <h3 className="text-1xl sm:text-2xl font-bold text-foreground">
               Startup Focused
             </h3>
-            <p className="text-[var(--brand-dark-2)] text-sm">
+            <p className="text-dark-2 text-sm">
               Modern & Scalable
             </p>
           </div>
 
           <div>
-            <h3 className="text-1xl sm:text-2xl font-bold text-[var(--brand-dark-3)]">
+            <h3 className="text-1xl sm:text-2xl font-bold text-foreground">
               User-Centered
             </h3>
-            <p className="text-[var(--brand-dark-2)] text-sm">
+            <p className="text-dark-2 text-sm">
               Performance Driven
             </p>
           </div>

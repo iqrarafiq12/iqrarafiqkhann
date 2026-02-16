@@ -44,13 +44,13 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="min-h-screen text-[var(--brand-dark-3)] px-4 sm:px-6 lg:px-8 py-20 lg:ml-[-30px]">
+    <section className="min-h-screen text-dark-3 px-4 sm:px-6 lg:px-8 py-20 lg:ml-[-30px]">
       <div className="max-w-5xl mx-auto">
         
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12">
+        <h2 className="text-4xl text-foreground sm:text-5xl lg:text-6xl font-bold mb-12">
           Frequently Asked{" "}
-          <span className="text-[var(--brand-accent)]">
+          <span className="text-accent">
             Questions
           </span>
         </h2>
@@ -72,16 +72,16 @@ export default function FaqSection() {
                 {/* Question */}
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full flex items-center justify-between p-6 text-left"
+                  className="w-full flex items-center justify-between p-6 text-left text-foreground"
                 >
                   <span className="text-lg sm:text-xl font-medium">
                     {faq.question}
                   </span>
 
                   {isOpen ? (
-                    <FiChevronUp className="text-[var(--brand-accent)] text-xl" />
+                    <FiChevronUp className="text-accent text-xl" />
                   ) : (
-                    <FiChevronDown className="text-[var(--brand-dark-2)] text-xl" />
+                    <FiChevronDown className="text-dark-2 text-xl" />
                   )}
                 </button>
 
@@ -91,7 +91,7 @@ export default function FaqSection() {
                     isOpen ? "max-h-80 px-6 pb-6" : "max-h-0"
                   }`}
                 >
-                  <p className="text-[var(--brand-dark-2)] text-sm sm:text-base leading-relaxed">
+                  <p className="text-dark-2 text-sm sm:text-base leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

@@ -7,7 +7,7 @@ export default function CTA() {
   return (
     <section className="px-4 sm:px-6 lg:px-8 py-20 mt-[-300px] lg:mt-[-130px] lg:ml-[-30px]">
       <div className="max-w-5xl mx-auto">
-        
+
         {/* CTA Card */}
         <div
           className="
@@ -29,7 +29,7 @@ export default function CTA() {
               sm:w-14 sm:h-14
               flex items-center justify-center
               rounded-full
-              bg-[var(--brand-primary)]
+              bg-primary
               hover:scale-110
               transition-all duration-300
               shadow-lg
@@ -40,15 +40,15 @@ export default function CTA() {
 
           {/* Content */}
           <div className="max-w-3xl">
-            <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-[var(--brand-dark-3)]">
+            <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-foreground">
               Let’s<br />
-              <span className="text-[var(--brand-primary)]">
+              <span className="text-primary">
                 Collaborate
               </span>
             </h2>
 
-            <p className="mt-6 text-[var(--brand-dark-2)] text-sm sm:text-base leading-relaxed">
-                 Unlock the potential of your product with expert design and
+            <p className="mt-6 text-dark-2 text-sm sm:text-base leading-relaxed">
+              Unlock the potential of your product with expert design and
               development services. Let’s collaborate to create user-centered
               solutions that not only meet your goals but also delight your users.
             </p>

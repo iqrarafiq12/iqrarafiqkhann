@@ -48,7 +48,7 @@ export default function ReviewsSection() {
   };
 
   return (
-    <section className="relative w-full py-20 text-[var(--foreground)] overflow-hidden mt-[-130px]
+    <section className="relative w-full py-20 text-foreground overflow-hidden mt-[-130px]
       ml-0 md:ml-[-60px] lg:ml-[-50px]">
     
       <div className="relative max-w-6xl mx-auto px-6 lg:px-12">
@@ -57,10 +57,10 @@ export default function ReviewsSection() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-            What Clients Say <br />
-            About My{" "}
-            <span className="text-[var(--brand-primary)]">
-              Work
+            What Clients Say<br />
+            About{" "}
+            <span className="text-primary">
+             My Work
             </span>
           </h2>
 
@@ -68,14 +68,14 @@ export default function ReviewsSection() {
           <div className="flex gap-4 mt-6 md:mt-0">
             <button
               onClick={prevReview}
-              className="w-12 h-12 rounded-full bg-[var(--brand-primary)] flex items-center justify-center hover:scale-110 transition"
+              className="w-12 h-12 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition"
             >
               <FaArrowLeft />
             </button>
 
             <button
               onClick={nextReview}
-              className="w-12 h-12 rounded-full bg-[var(--brand-primary)] flex items-center justify-center hover:scale-110 transition"
+              className="w-12 h-12 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition"
             >
               <FaArrowRight />
             </button>
@@ -93,11 +93,11 @@ export default function ReviewsSection() {
               </h3>
 
               {/* Subtitle */}
-              <p className="text-sm text-[var(--brand-dark-3)] mt-1 mb-3">
+              <p className="text-sm text-dark-3 mt-1 mb-3">
                 {reviews[current].subtitle}
               </p>
 
-              <p className="text-[var(--brand-dark-2)] text-sm sm:text-base leading-relaxed max-w-3xl">
+              <p className="text-dark-2 text-sm sm:text-base leading-relaxed max-w-3xl">
                 {reviews[current].review}
               </p>
             </div>
