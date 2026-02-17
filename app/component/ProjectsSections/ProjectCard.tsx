@@ -14,7 +14,7 @@ export default function ProjectCard({ project }: Props) {
       href={project.link}
       className="group block rounded-2xl overflow-hidden 
       border border-white/5 
-      hover:border-[var(--brand-accent)]
+      hover:border-accent
       transition-all duration-300"
     >
       {/* Image */}
@@ -25,7 +25,7 @@ export default function ProjectCard({ project }: Props) {
         sm:aspect-[16/10]   /* Tablet */
         md:aspect-[16/9]    /* Desktop */
         overflow-hidden 
-        bg-[var(--brand-secondary)]
+        bg-secondary
         shadow-2xl
       "
       >
@@ -41,10 +41,10 @@ export default function ProjectCard({ project }: Props) {
       </div>
 
       {/* Bottom Content Section */}
-      <div className="px-5 sm:px-6 py-5 bg-[var(--brand-secondary)]">
+      <div className="px-5 h-full sm:px-6 py-5 bg-secondary">
         <h3
           className="text-lg sm:text-xl font-semibold text-white 
-          group-hover:text-[var(--brand-accent)] 
+          group-hover:text-accent 
           transition-colors duration-300"
         >
           {project.title}
