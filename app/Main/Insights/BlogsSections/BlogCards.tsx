@@ -41,7 +41,7 @@ export default function BlogCards({ project }: Props) {
       </div>
 
       {/* Bottom Content Section */}
-      <div className="px-5 sm:px-6 py-5 bg-[var(--brand-secondary)]">
+      <div className="px-5 h-full sm:px-6 py-5 bg-[var(--brand-secondary)]">
         <h3
           className="text-lg sm:text-xl font-semibold text-white 
           group-hover:text-[var(--brand-accent)] 
