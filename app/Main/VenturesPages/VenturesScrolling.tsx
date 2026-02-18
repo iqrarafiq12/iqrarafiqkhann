@@ -7,7 +7,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import FaqSection from "./FaqSection";
 
 import Projects from "./Projects";
-import CTASection from "../ProjectsSection/CTASection";
+import Contact from "../Contacts/Contact";
 
 export default function VenturesScrolling() {
   return (
@@ -79,7 +79,7 @@ export default function VenturesScrolling() {
       <FaqSection />
 
       {/* CTA */}
-      <CTASection />
+      <Contact />
     </section>
   );
 }

@@ -1,26 +1,40 @@
+// data/servicesData.ts
+
 export const ServicesData = [
   {
-    title: "UI/UX & PRODUCT DESIGN",
+    title: "STARTUP BRAND & DIGITAL LAUNCH PACKAGE",
     description:
-      "I design user-centered digital products that balance usability, clarity, and business growth. From UX research and user journeys to high-fidelity UI systems, I create scalable experiences that solve real problems and drive measurable impact.",
-    link: "/services/ui-ux-product-design",
+      "Designed for early-stage startups and founders who need a strong foundation. This package includes brand positioning, logo and visual identity systems, UI/UX design for key screens, and a modern responsive website. I build brands that are visually strong and strategically prepared to enter the market with clarity and confidence.",
+    link: "/packages/startup-brand-digital-launch",
   },
   {
-    title: "WEBSITE DESIGN & DEVELOPMENT",
+    title: "UI/UX & PRODUCT GROWTH PACKAGE",
     description:
-      "I build fast, modern, and conversion-focused websites using scalable frontend architecture and clean UI systems. My approach combines design precision with technical execution to ensure performance, responsiveness, and long-term flexibility.",
-    link: "/services/website-design-development",
+      "A complete product design solution for SaaS, web apps, and digital platforms. Includes UX research, user journeys, wireframes, high-fidelity UI design, design systems, and usability optimization. Focused on scalable, conversion-driven, and user-centered digital experiences aligned with business goals.",
+    link: "/packages/ui-ux-product-growth",
   },
   {
-    title: "BRAND STRATEGY & VISUAL IDENTITY",
+    title: "WEBSITE & PERFORMANCE OPTIMIZATION PACKAGE",
     description:
-      "I help startups define their positioning, messaging clarity, and visual identity systems. From brand discovery to complete identity design, I create market-aligned brands built for authority and consistency across platforms.",
-    link: "/services/brand-strategy-identity",
+      "Build or upgrade high-performing websites with modern UI design, frontend development, responsiveness, speed optimization, SEO foundations, and conversion structure. Every website is crafted for visibility, performance, and measurable growth.",
+    link: "/packages/website-performance",
   },
   {
-    title: "PERFORMANCE & GROWTH OPTIMIZATION",
+    title: "SOCIAL MEDIA, PR & CONTENT STRATEGY PACKAGE",
     description:
-      "I optimize digital platforms for speed, structure, SEO foundations, and conversion performance. From technical improvements to user experience refinements, I help brands scale sustainably and improve visibility.",
-    link: "/services/performance-growth",
+      "For personal brands and businesses seeking authority and visibility. Includes social media design systems, campaign creatives, PR strategy, Instagram direction, and long-form content support — blending storytelling with structured marketing.",
+    link: "/packages/social-pr-content",
+  },
+  {
+    title: "ECOMMERCE & RESELLING GROWTH CONSULTATION",
+    description:
+      "Support for individuals and small businesses entering eCommerce. Covers product positioning, marketplace strategy, branding foundations, and digital presentation clarity.",
+    link: "/packages/ecommerce-reselling-growth",
+  },
+  {
+    title: "MENTORSHIP & CREATIVE SKILL DEVELOPMENT",
+    description:
+      "Structured learning for students and aspiring creatives. Includes UI/UX mentoring, portfolio guidance, freelancing roadmap support, and personalized tutoring focused on practical growth and confidence building.",
+    link: "/packages/mentorship-creative-development",
   },
 ];

@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { projects } from "./Projects-Data";
 import ProjectCard from "@/app/component/ProjectsSections/ProjectCard";
-import FaqSection from "./FaqSection";
 import CTASection from "./CTASection";
 
 export default function ProjectsScrolling() {
@@ -90,7 +89,6 @@ export default function ProjectsScrolling() {
       </div>
 
       {/* FAQS*/}
-         <FaqSection />
          <CTASection />
     </section>
   );

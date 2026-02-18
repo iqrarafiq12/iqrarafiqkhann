@@ -17,7 +17,6 @@ const navItems = [
   { name: "Ventures", href: "/ventures", icon: RiGiftLine }, // OTHER SKILLS PROJECTS
   { name: "Services", href: "/services", icon: RiToolsLine }, // SERVICES AND OFFERS LIKE PACKAGES FAQS AND CONTACT  
   { name: "Insights", href: "/insights", icon: RiEditLine }, // blogs EXPERIENCES // CERTIFICATIONS
-  { name: "Contact", href: "/contact", icon: RiMailLine }, // LEADS COLLECTION
 ];
 
 export default function Navbar() {

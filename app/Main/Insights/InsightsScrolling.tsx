@@ -1,11 +1,12 @@
 "use client";
 
 
-import CTASection from "../ProjectsSection/CTASection";
+
 import ToolsSection from "./Tools/ToolsSection";
 import MyGallery from "./MyGallery";
 import BlogSection from "./BlogsSections/BlogSection";
 import ExperiencePage from "./Experience";
+import CTASection from "../Services/CTASection";
 
 export default function VenturesScrolling() {
   return (
@@ -17,7 +18,6 @@ export default function VenturesScrolling() {
       {/* Tools */}
       <ToolsSection />
       <MyGallery />
-      {/* CTA */}
       <CTASection />
     </section>
   );

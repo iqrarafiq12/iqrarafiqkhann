@@ -2,127 +2,133 @@
 
 import { useState } from "react";
 
-export default function ContactsPage() {
-  const [form, setForm] = useState({
-    name: "",
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    fullName: "",
     email: "",
+    phone: "",
     budget: "",
     message: "",
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(form);
+    console.log(formData);
   };
 
   return (
-    <section
-      className="py-20 px-4 sm:px-6 lg:px-12 mt-[-70px] ml-0 md:ml-[-60px] lg:ml-[-30px]"
-      style={{ backgroundColor: "var(--background)", color: "var(--foreground)" }}
-    >
-      <div className="max-w-5xl mx-auto">
+    <section className="relative py-20 px-4 sm:px-6 lg:px-12 mt-[-70px] ml-0 md:ml-[-60px] lg:ml-[-40px] space-y-10 text-[var(--foreground)]">
+      
+      {/* Background gradient */}
 
+      <div className="relative max-w-5xl mx-auto">
+        
         {/* Heading */}
-        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
-          LET'S WORK
-          <br />
-          <span className="text-[var(--brand-dark-3)]">TOGETHER</span>
-        </h1>
+        <h2 className="text-4xl md:text-5xl font-light mb-4">
+          Let's Work{" "}
+          <span className="text-[var(--brand-accent)] font-bold">
+            Together!
+          </span>
+        </h2>
+
+        <p className="text-[var(--brand-dark-2)] mb-12">
+workwithiqr@gmail.com        </p>
 
         {/* Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="mt-16 space-y-8"
-        >
-          {/* Name + Email */}
+        <form onSubmit={handleSubmit} className="space-y-8">
+
+          {/* Row 1 */}
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <label className="text-sm text-[var(--brand-dark-3)] block mb-2">
-                Name
+                FULL NAME *
               </label>
               <input
                 type="text"
-                name="name"
-                placeholder="Your Name"
-                value={form.name}
+                name="fullName"
+                required
+                placeholder="Your Full Name"
+                value={formData.fullName}
                 onChange={handleChange}
-                className="w-full rounded-lg px-4 py-3 bg-[var(--brand-secondary)] text-white outline-none focus:ring-2 focus:ring-[var(--brand-accent)] transition"
+                className="w-full text-[13px] text-white/50 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
               />
             </div>
 
             <div>
               <label className="text-sm text-[var(--brand-dark-3)] block mb-2">
-                Email
+                EMAIL *
               </label>
               <input
                 type="email"
                 name="email"
-                placeholder="Your@email.com"
-                value={form.email}
+                required
+                placeholder="Your email address"
+                value={formData.email}
                 onChange={handleChange}
-                className="w-full rounded-lg px-4 py-3 bg-[var(--brand-secondary)] text-white outline-none focus:ring-2 focus:ring-[var(--brand-accent)] transition"
+                className="w-full text-[13px] text-white/50 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
               />
             </div>
           </div>
 
-          {/* Budget */}
-          <div>
-            <label className="text-sm text-[var(--brand-dark-3)] block mb-2">
-              Budget
-            </label>
-            <select
-              name="budget"
-              value={form.budget}
-              onChange={handleChange}
-              className="w-full rounded-lg px-4 py-3 bg-[var(--brand-secondary)] text-white outline-none focus:ring-2 focus:ring-[var(--brand-accent)] transition"
-            >
-              <option value="">Select...</option>
-              <option value="500-1000">$500 - $1,000</option>
-              <option value="1000-3000">$1,000 - $3,000</option>
-              <option value="3000-5000">$3,000 - $5,000</option>
-              <option value="5000+">$5,000+</option>
-            </select>
+          {/* Row 2 */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <label className="text-sm text-[var(--brand-dark-3)] block mb-2">
+                PHONE (optional)
+              </label>
+              <input
+                type="text"
+                name="phone"
+                placeholder="Your phone number"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full text-[13px] text-white/50 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
+              />
+            </div>
+
+            <div>
+              <label className="text-sm text-[var(--brand-dark-3)] block mb-2">
+                YOUR BUDGET (optional)
+              </label>
+              <input
+                type="text"
+                name="budget"
+                placeholder="Your budget range for the project"
+                value={formData.budget}
+                onChange={handleChange}
+                className="w-full text-[13px] text-white/60 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
+              />
+            </div>
           </div>
 
           {/* Message */}
           <div>
             <label className="text-sm text-[var(--brand-dark-3)] block mb-2">
-              Message
+              MESSAGE *
             </label>
             <textarea
               name="message"
+              required
               rows={5}
-              placeholder="Message"
-              value={form.message}
+              placeholder="Write your message here..."
+              value={formData.message}
               onChange={handleChange}
-              className="w-full rounded-lg px-4 py-3 bg-[var(--brand-secondary)] text-white outline-none focus:ring-2 focus:ring-[var(--brand-accent)] transition resize-none"
+              className="w-full text-[18px] bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition resize-none"
             />
           </div>
 
-          {/* Submit Button */}
+          {/* Button */}
           <button
             type="submit"
-            className="    w-full
-          py-3
-          rounded-xl
-          bg-primary
-          hover:opacity-90
-          transition
-          text-foreground
-          font-semibold
-          text-sm sm:text-base"
-            style={{
-              backgroundColor: "var(--brand-accent)",
-              color: "#111",
-            }}
+            className="bg-[var(--brand-primary)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--brand-accent)] transition duration-300"
           >
-            Submit
+            SEND MESSAGE
           </button>
         </form>
       </div>

@@ -5,7 +5,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 export default function CTASection() {
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20 lg:ml-[-30px] mt-[-90px]">
+    <section className="px-4 sm:px-6 lg:px-8 py-20 lg:ml-[-30px] mt-[-10px]">
       <div className="max-w-5xl mx-auto">
         
         {/* CTA Card */}

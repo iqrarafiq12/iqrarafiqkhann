@@ -28,7 +28,7 @@ const instagramPosts: InstaPost[] = [
 
 export default function MyGallery() {
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-12 mt-[-50px]
+        <section className="py-20 px-4 sm:px-6 lg:px-12 mt-[-100px]
       ml-0 md:ml-[-60px] lg:ml-[-50px]">
             {/* Heading */}
             <div className="text-center mb-6">

@@ -44,13 +44,13 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="text-dark-3 px-4 sm:px-6 lg:px-8 py-20 lg:ml-[-30px] mt-[-120px]">
+    <section className="text-dark-3 px-4 sm:px-6 lg:px-8 py-20 lg:ml-[-30px] mt-[-70px]">
       <div className="max-w-5xl mx-auto">
         
         {/* Heading */}
         <h2 className="text-4xl text-foreground sm:text-5xl lg:text-6xl font-bold mb-12">
           Frequently Asked{" "}
-          <span className="text-accent">
+          <span className="text-primary">
             Questions
           </span>
         </h2>

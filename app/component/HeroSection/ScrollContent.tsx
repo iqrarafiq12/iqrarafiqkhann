@@ -3,8 +3,8 @@ import ProjectsSection from "../ProjectsSections/ProjectsSection";
 
 import ReviewsSection from "../ReviewsSection";
 import QA from "../QA";
-import CTA from "../CTA";
 import BlogSection from "../BlogsSections/BlogSection";
+import Contact from "@/app/Main/Contacts/Contact";
 
 
 export default function ScrollContent() {
@@ -131,7 +131,7 @@ export default function ScrollContent() {
 
         {/* CTA */}
 
-        <CTA />
+        <Contact />
 
       </section>
     </>
