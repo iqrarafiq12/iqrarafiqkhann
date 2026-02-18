@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -11,25 +12,53 @@ export default function Contact() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    setLoading(true);
+    setSuccess("");
+
+    try {
+      await emailjs.send(
+        "service_wx9pjiq",      // Service ID Added
+        "template_0tqfilo",     // Email Tamplate ID Added
+        {
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          budget: formData.budget,
+          message: formData.message,
+        },
+        "Ntsmap_HNHHL790ii"      // My public key
+      );
+
+      setSuccess("Message sent successfully! I will contact you soon.");
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        budget: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      setSuccess("Something went wrong. Please try again.");
+    }
+
+    setLoading(false);
   };
 
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-12 mt-[-70px] ml-0 md:ml-[-60px] lg:ml-[-40px] space-y-10 text-[var(--foreground)]">
-      
-      {/* Background gradient */}
-
       <div className="relative max-w-5xl mx-auto">
-        
-        {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-light mb-4">
           Let's Work{" "}
           <span className="text-[var(--brand-accent)] font-bold">
@@ -38,12 +67,10 @@ export default function Contact() {
         </h2>
 
         <p className="text-[var(--brand-dark-2)] mb-12">
-workwithiqr@gmail.com        </p>
+          workwithiqr@gmail.com
+        </p>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-8">
-
-          {/* Row 1 */}
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <label className="text-sm text-[var(--brand-dark-3)] block mb-2">
@@ -76,7 +103,6 @@ workwithiqr@gmail.com        </p>
             </div>
           </div>
 
-          {/* Row 2 */}
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <label className="text-sm text-[var(--brand-dark-3)] block mb-2">
@@ -107,7 +133,6 @@ workwithiqr@gmail.com        </p>
             </div>
           </div>
 
-          {/* Message */}
           <div>
             <label className="text-sm text-[var(--brand-dark-3)] block mb-2">
               MESSAGE *
@@ -123,13 +148,19 @@ workwithiqr@gmail.com        </p>
             />
           </div>
 
-          {/* Button */}
           <button
             type="submit"
-            className="bg-[var(--brand-primary)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--brand-accent)] transition duration-300"
+            disabled={loading}
+            className="bg-[var(--brand-primary)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--brand-accent)] transition duration-300 disabled:opacity-50"
           >
-            SEND MESSAGE
+            {loading ? "Sending..." : "SEND MESSAGE"}
           </button>
+
+          {success && (
+            <p className="text-sm mt-4 text-[var(--brand-accent)]">
+              {success}
+            </p>
+          )}
         </form>
       </div>
     </section>

@@ -26,7 +26,12 @@ export const BlogData: Blog[] = [
     image: "/Blog-02.webp",
     link: "https://medium.com/@IqraRafiqKhan/a-tiring-day-but-a-meaningful-one-c5e666918c55",
   },
-
+ {
+    title: "The $4,000 Logo Design Offer",
+    description: "At first glance, it felt exciting. As creatives, we’re always looking for serious clients. A well-paying remote brief? Multiple brands? Tight deadline? It sounded intense but promising.",
+    image: "/Blog-06.webp",
+    link: "https://medium.com/@IqraRafiqKhan/the-4-000-logo-design-offer-that-turned-out-to-be-a-scam-489fe408742f",
+  },
   {
     title: "Why Do People Stay Silent About the Innocent Lives Lost in Gaza?",
     description: "It’s heartbreaking and deeply confusing how the world remains silent while innocent lives are being lost in Gaza.",
