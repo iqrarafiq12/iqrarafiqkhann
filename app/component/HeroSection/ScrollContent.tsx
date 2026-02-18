@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ProjectsSection from "../ProjectsSections/ProjectsSection";
-import ToolsSection from "../Tools/ToolsSection";
+
 import ReviewsSection from "../ReviewsSection";
 import QA from "../QA";
 import CTA from "../CTA";
@@ -119,8 +119,6 @@ export default function ScrollContent() {
 
 
         {/* TOOLS */}
-
-        <ToolsSection />
 
         {/* TOOLS */}
         <ReviewsSection />

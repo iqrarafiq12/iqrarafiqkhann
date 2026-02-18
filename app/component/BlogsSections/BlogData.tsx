@@ -33,10 +33,4 @@ export const BlogData: Blog[] = [
     image: "/Blog-04.webp",
     link: "https://medium.com/@IqraRafiqKhan/why-do-people-stay-silent-about-the-innocent-lives-lost-in-gaza-5b65fd08a549",
   },
-    {
-    title: "Gaza and the Silence of the Muslim World",
-    description: "Inside Gaza, survival itself has become an everyday battle. The Israeli attacks have destroyed access to the most basic necessities of life:",
-    image: "/Blog-05.webp",
-    link: "https://medium.com/@IqraRafiqKhan/gaza-and-the-silence-of-the-muslim-world-45f2dd5f93df",
-  },
 ];
