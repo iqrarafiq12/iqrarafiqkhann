@@ -1,56 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    budget: "",
-    message: "",
-  });
+  const formRef = useRef<HTMLFormElement | null>(null);
 
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState("");
+  const [status, setStatus] = useState("");
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!formRef.current) return;
+
     setLoading(true);
-    setSuccess("");
+    setStatus("");
 
     try {
-      await emailjs.send(
-        "service_wx9pjiq",      // Service ID Added
-        "template_0tqfilo",     // Email Tamplate ID Added
-        {
-          fullName: formData.fullName,
-          email: formData.email,
-          phone: formData.phone,
-          budget: formData.budget,
-          message: formData.message,
-        },
-        "Ntsmap_HNHHL790ii"      // My public key
+      await emailjs.sendForm(
+        "service_wx9pjiq",      // Your Service ID
+        "template_xx8173l",     // Your Template ID
+        formRef.current,
+        "Ntsmap_HNHHL790ii"     // Your Public Key
       );
 
-      setSuccess("Message sent successfully! I will contact you soon.");
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        budget: "",
-        message: "",
-      });
+      setStatus("Message sent successfully! I will contact you soon.");
+      formRef.current.reset();
     } catch (error) {
-      console.error(error);
-      setSuccess("Something went wrong. Please try again.");
+      console.error("EmailJS Error:", error);
+      setStatus("Something went wrong. Please try again.");
     }
 
     setLoading(false);
@@ -70,7 +49,7 @@ export default function Contact() {
           workwithiqr@gmail.com
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-8">
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-8">
           <div className="grid md:grid-cols-2 gap-6">
             <div>
               <label className="text-sm text-[var(--brand-dark-3)] block mb-2">
@@ -81,9 +60,7 @@ export default function Contact() {
                 name="fullName"
                 required
                 placeholder="Your Full Name"
-                value={formData.fullName}
-                onChange={handleChange}
-                className="w-full text-[13px] text-white/50 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
+                className="w-full text-[13px] text-white/70 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
               />
             </div>
 
@@ -96,9 +73,7 @@ export default function Contact() {
                 name="email"
                 required
                 placeholder="Your email address"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full text-[13px] text-white/50 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
+                className="w-full text-[13px] text-white/70 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
               />
             </div>
           </div>
@@ -112,9 +87,7 @@ export default function Contact() {
                 type="text"
                 name="phone"
                 placeholder="Your phone number"
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full text-[13px] text-white/50 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
+                className="w-full text-[13px] text-white/70 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
               />
             </div>
 
@@ -126,9 +99,7 @@ export default function Contact() {
                 type="text"
                 name="budget"
                 placeholder="Your budget range for the project"
-                value={formData.budget}
-                onChange={handleChange}
-                className="w-full text-[13px] text-white/60 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
+                className="w-full text-[13px] text-white/70 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition"
               />
             </div>
           </div>
@@ -142,9 +113,7 @@ export default function Contact() {
               required
               rows={5}
               placeholder="Write your message here..."
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full text-[18px] bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition resize-none"
+              className="w-full text-[16px] text-white/80 bg-[var(--brand-secondary)] border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] transition resize-none"
             />
           </div>
 
@@ -156,9 +125,9 @@ export default function Contact() {
             {loading ? "Sending..." : "SEND MESSAGE"}
           </button>
 
-          {success && (
+          {status && (
             <p className="text-sm mt-4 text-[var(--brand-accent)]">
-              {success}
+              {status}
             </p>
           )}
         </form>
